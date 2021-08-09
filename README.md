@@ -8,7 +8,7 @@
 7. ChemAxon License for Knime Nodes (https://docs.chemaxon.com/display/docs/knime-nodes-licensing.md)
 
 
-**KNIME EXTENSIONS TO INSTALL:  **
+**KNIME EXTENSIONS TO INSTALL:**
 1. ChemAxon/Infocom JChem Extensions Feature (https://hub.knime.com/infocom/extensions/jp.co.infocom.cheminfo.jchem.feature/latest)
 2. ChemAxon/Infocom Marvin Extensions Feature (ChemAxon/Infocom Marvin Extensions Feature)
 3. Indigo Knime Integration (https://hub.knime.com/epam-lsop/extensions/com.epam.indigo.knime.feature/latest)
@@ -21,6 +21,7 @@ The workflow group "**canSAR_Chemistry_Registration_Pipeline**" should be import
 
 
 **GENERAL MODE OF OPERATION OF THE PIPELINE:**
+
 Starting from an input SDF file, the pipeline will process compounds generating automatically a Result folder in the input path containing a total of at least 4 output sdf.gz file: 1. Standardized molecules (FICTS); 2. Canonical tautomers (FICuS); 3. Canonical tautomers split of salts (uICuS); and 4. Parent compounds (uuuuu). For each SDF file, SMILES, InChI & nsInChI, InChI Key & nsInChI Key are calculated. 
 
 The SDF Reader node is set to extract all the properties, but the setting can be easily changed in the dedicated tab. Also the properties to export are customizable in the SDF writer nodes in the Metanodes.  
@@ -32,6 +33,7 @@ If more than one sdf file are listed in the input directory they will be handled
 If the input file contains more than 3,000 molecules, it will be split. You will find a number of output files equal to the times that the file is split (for 10k compounds in the input file you will have 4 output files) to prevent calculation to get stacked. The settings can be customized choosing the numbers of chunks in the Chunk loop Node inside each of the Output Metanodes.
 
 **EXAMPLE FILES TO TEST THE PIPELINE:**
+
 The 3 sample files furnished in the workflow group contain only one property (chembl_ID) that will be used as Molecule name in the output as set in the SDF Writer nodes.
 Executing the File Reader Node, if the Workflow group has been imported in the LOCAL Knime Workspace, the example files will be read and can be processed executing the Variable Condition Loop End Node. Output files will then generated in the Knime_workspace folder (Knime_Workspace/canSAR_Chemistry_Registration_Pipeline) and will be accessible also directly through Knime LOCAL Workspace from Knime GUI, right-clicking on the canSAR folder and pressing "Refresh" if the created folders do not show. Input path can be changed as desired.
 Estimate execution time for the 3 sample files in a workstation with 3 available CPU is 10 minutes.
