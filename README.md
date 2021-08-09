@@ -17,7 +17,7 @@
 6. RDKit Nodes for Knime (https://hub.knime.com/manuelschwarze/extensions/org.rdkit.knime.feature/latest)
 Knime will automatically prompt to install the eventual missing extensions upon workflow importing & opening.
 
-The workflow group "**canSAR_Chemistry_Registration_Pipeline**" should be imported in LOCAL Knime workspace to avoid to set the path for SDF Reader Nodes inside the uICuS metanodes (3. Salt Strip Chembl Lists) that point to mountpoint-relative URL.
+The workflow group **canSAR_Chemistry_Registration_Pipeline** should be imported in LOCAL Knime workspace to avoid to set the path for SDF Reader Nodes inside the uICuS metanodes (3. Salt Strip Chembl Lists) that point to mountpoint-relative URL.
 
 
 **GENERAL MODE OF OPERATION OF THE PIPELINE:**
