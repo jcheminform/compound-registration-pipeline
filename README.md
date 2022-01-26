@@ -17,12 +17,12 @@
 6. RDKit Nodes for Knime (https://hub.knime.com/manuelschwarze/extensions/org.rdkit.knime.feature/latest)
 Knime will automatically prompt to install the eventual missing extensions upon workflow importing & opening.
 
-The workflow group **canSAR_Chemistry_Registration_Pipeline** should be imported in LOCAL Knime workspace to avoid to set the path for SDF Reader Nodes inside the uICuS metanodes (3. Salt Strip Chembl Lists) that point to mountpoint-relative URL.
+The workflow group **canSARchem** should be imported in LOCAL Knime workspace to avoid to set the path for SDF Reader Nodes inside the uICuS metanodes (3. Salt Strip Chembl Lists) that point to mountpoint-relative URL.
 
 
 **GENERAL MODE OF OPERATION OF THE PIPELINE:**
 
-Starting from an input SDF file, the pipeline will process compounds generating automatically a Result folder in the input path containing a total of at least 4 output sdf.gz file: 1. Standardized molecules (FICTS); 2. Canonical tautomers (FICuS); 3. Canonical tautomers split of salts (uICuS); and 4. Parent compounds (uuuuu). For each SDF file, SMILES, InChI & nsInChI, InChI Key & nsInChI Key are calculated. 
+Starting from an input SDF file, the pipeline will process compounds generating automatically a Result folder in the input path containing a total of at least 4 output sdf.gz file: 1. Standard Compounds; 2. Canonical Representatives; 3. Unsalted Canonical Representative; and 4. Abstract Compounds. For each SDF file, SMILES, InChI & nsInChI, InChI Key & nsInChI Key are calculated. 
 
 The SDF Reader node is set to extract all the properties, but the setting can be easily changed in the dedicated tab. Also the properties to export are customizable in the SDF writer nodes in the Metanodes.  
 
