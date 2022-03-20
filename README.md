@@ -1,11 +1,10 @@
-**PRE-REQUISITES:**
+**PRE-REQUISITES:** 
 1. Basic knowledge of Knime nodes and operations
-2. Knime version later than 4.5 (https://www.knime.com/downloads)
+2. Knime version later than 4.5.0 (https://www.knime.com/downloads)
 3. Python 3 environment with RDKit (version 2021.09.4) and MolVS (version 0.1.1) installed linked to Knime
 4. Installing python on Knime: https://docs.knime.com/2018-12/python_installation_guide/index.html
 5. Installing RDKit on python: https://www.rdkit.org/docs/Install.html
-6. Installing MolVS on python: https://github.com/mcs07/MolVS
-7. ChemAxon License for Knime Nodes (https://docs.chemaxon.com/display/docs/knime-nodes-licensing.md)
+6. ChemAxon License for Knime Nodes (https://docs.chemaxon.com/display/docs/knime-nodes-licensing.md)
 
 
 **KNIME EXTENSIONS TO INSTALL:**
@@ -19,6 +18,9 @@ Knime will automatically prompt to install the eventual missing extensions upon 
 
 The workflow group **canSARchem.knar** should be imported in LOCAL Knime workspace to avoid setting the path for SDF Reader Nodes inside the Salt Strip metanode (3. Salt Strip Lists) that point to mounting point-relative URL.
 
+The workflow group contains two different pipelines:
+1. canSARchem - ChemAxon nodes for which a specific license is needed.
+2. canSARchem_RdKit - open-source version of the pipeline - All files written by this pipeline will be added in folders with _RDKit as a suffix (i.e. "Results_RDKit").
 
 **GENERAL MODE OF OPERATION OF THE PIPELINE:**
 
