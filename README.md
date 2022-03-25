@@ -1,7 +1,7 @@
 **PRE-REQUISITES:** 
 1. Basic knowledge of Knime nodes and operations
 2. Knime version later than 4.5.0 (https://www.knime.com/downloads)
-3. Python 3 environment with RDKit (version 2021.09.4) and MolVS (version 0.1.1) installed linked to Knime
+3. Python 3 environment with RDKit (version 2021.09.4)
 4. Installing python on Knime: https://docs.knime.com/2018-12/python_installation_guide/index.html
 5. Installing RDKit on python: https://www.rdkit.org/docs/Install.html
 6. ChemAxon License for Knime Nodes (https://docs.chemaxon.com/display/docs/knime-nodes-licensing.md)
@@ -37,7 +37,7 @@ If the input file contains more than 3,000 molecules, it will be split. You will
 **EXAMPLE FILES TO TEST THE PIPELINE:**
 
 The 3 sample files furnished in the workflow group contain only one property (chembl_id) that will be used as Molecule name in the output as set in the SDF Writer nodes.
-Executing the File Reader Node, if the Workflow group has been imported in the LOCAL Knime Workspace, the example files will be read and can be processed by executing the Variable Condition Loop End Node. Output files will then be generated in the Knime_workspace folder (Knime_Workspace/canSAR_Chemistry_Registration_Pipeline) and will be accessible also directly through Knime LOCAL Workspace from Knime GUI, right-clicking on the canSAR folder and pressing "Refresh" if the created folders do not show. The input path can be changed as desired.
+Executing the File Reader Node, if the Workflow group has been imported in the LOCAL Knime Workspace, the example files will be read and can be processed by executing the Loop End Node. Output files will then be generated in the Knime_workspace folder (Knime_Workspace/canSAR_Chemistry_Registration_Pipeline) and will be accessible also directly through Knime LOCAL Workspace from Knime GUI, right-clicking on the canSAR folder and pressing "Refresh" if the created folders do not show. The input path can be changed as desired.
 The estimated execution time for the 3 sample files in a workstation with at least 3 available CPUs is 10 minutes.
 
 **STEPS TO RUN THE PIPELINE WITH CUSTOM FILES:**
